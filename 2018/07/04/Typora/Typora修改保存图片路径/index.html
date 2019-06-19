@@ -1937,9 +1937,9 @@
 <pre><code>/Applications/Typora.app/Contents/Resources/TypeMark/app/main.js</code></pre><p>查找如下内容，可以看到它找到文件路径，然后『replace』后加上了『.assets』</p>
 <pre><code>this.preFileImageStorage=f.normalizePath(e+File.getFileName().replace(/\.[^.\/\\]+$/,&quot;&quot;)+&quot;.assets&quot;,!0)</code></pre><p>需要把『.assets』去掉，就只有文件路径了，修改如下</p>
 <pre><code>this.preFileImageStorage=f.normalizePath(e+File.getFileName().replace(/\.[^.\/\\]+$/,&quot;&quot;),!0)</code></pre><p>重启『Typora』后，发现描述还是没有被改变，估计再另外一个配置文件里面，修改如上已经达到目的了，就不在修改描述了</p>
-<p><img src="Typora%E4%BF%AE%E6%94%B9%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84/image-20180620143930075.png" alt="image-20180620143930075"></p>
+<p><img src="/2018/07/04/Typora/Typora修改保存图片路径/image-20180620143930075.png" alt="image-20180620143930075"></p>
 <p>测试一下，已经达到目的了</p>
-<p><img src="Typora%E4%BF%AE%E6%94%B9%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84/image-20180620144358296.png" alt="image-20180620144358296"></p>
+<p><img src="/2018/07/04/Typora/Typora修改保存图片路径/image-20180620144358296.png" alt="image-20180620144358296"></p>
 
 </div>
 

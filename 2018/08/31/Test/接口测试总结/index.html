@@ -1934,7 +1934,7 @@
 <div id="article">
 	<h1 id="序章"><a href="#序章" class="headerlink" title="序章"></a>序章</h1><p>​        说起接口测试，网上有很多例子，但是当初做为新手的我来说，看了不不知道他们说的什么，觉得接口测试，好高大上。认为学会了接口测试就能屌丝逆袭，走上人生巅峰，迎娶白富美。因此学了点开发知识后，发现接口测试其实都是人们玩的名词罢了。接口测试，真心很简单。它只不过是数据传递是一种表现而已。</p>
 <h2 id="请求模型"><a href="#请求模型" class="headerlink" title="请求模型"></a>请求模型</h2><p>​        看下图中“A”线，可以理解为接口就是一个电灯的开关，它在接口里面给你提供了一个参数，参数的值一个是“开”，一个是“关”。</p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/ifs.png" alt="ifs"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/ifs.png" alt="ifs"></p>
 <p>​        说起来，怎么才能让灯亮？一个灯头接两根线，一根线接火线，一根线接零线这时灯就亮了。反之，不接零线、火线灯就灭了。</p>
 <p>​        其实接口呢，就把这些复杂的操作简化了，让你看到的就只有一个开关，而你来操作这个开关就好了。我们做接口测试也只需要测试这个开关就完成任务了，接口测试就是这么简单。</p>
 <ol>
@@ -1942,7 +1942,7 @@
 <li>当你访问“<a href="http://127.0.0.1:8080/light?opt=close" target="_blank" rel="noopener">http://127.0.0.1:8080/light?opt=close</a>”，让零线、火线断开，此时灯灭。</li>
 </ol>
 <h2 id="请求结构"><a href="#请求结构" class="headerlink" title="请求结构"></a>请求结构</h2><p>​        看到这里我们大致就明白了接口测试是怎么一回事了。接下来需要理解一下HTTP的URL是怎么组成为一个接口的。如图：</p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/ifs_detail.png" alt="ifs_detail"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/ifs_detail.png" alt="ifs_detail"></p>
 <ol>
 <li><p>一个URL就是一个接口：接口大致会分为一下几个部分：</p>
 <ol>
@@ -2016,8 +2016,8 @@ Accept-Encoding:gzip,deflate.</code></pre>
 </li>
 </ol>
 <p>​        看到上面的请求结构，就能接口测试了，只需要修改接口的参数，就可以像功能测试一样测了。可以用功能测试设计用例的方法来设计接口测试的用例。可以使用各种测试用具辅助测试，下图为“postman”测试工具。</p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/postman2.png" alt="postman2"></p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/postman1.png" alt="postman1"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/postman2.png" alt="postman2"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/postman1.png" alt="postman1"></p>
 <h2 id="接口的请求会发向哪里"><a href="#接口的请求会发向哪里" class="headerlink" title="接口的请求会发向哪里"></a>接口的请求会发向哪里</h2><p>我们可以看看这样一个接口，用Java的Servlet怎么来实现</p>
 <pre><code class="java">package com.yy.test;
 
@@ -2089,8 +2089,8 @@ public class light extends HttpServlet {
 </li>
 </ol>
 <p>确定了这些，才能做好接口测试。好的接口文档如下：</p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/ifs_doc.png" alt="ifs_doc"></p>
-<h2 id="复杂一点的接口，RESTful"><a href="#复杂一点的接口，RESTful" class="headerlink" title="复杂一点的接口，RESTful"></a>复杂一点的接口，RESTful</h2><p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/ifs_restful.png" alt="ifs_restful"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/ifs_doc.png" alt="ifs_doc"></p>
+<h2 id="复杂一点的接口，RESTful"><a href="#复杂一点的接口，RESTful" class="headerlink" title="复杂一点的接口，RESTful"></a>复杂一点的接口，RESTful</h2><p><img src="/2018/08/31/Test/接口测试总结/ifs_restful.png" alt="ifs_restful"></p>
 <p>一个用户接口可以通过以下4种不同方式的请求，来做不同的事情：</p>
 <ol>
 <li><p>获取用户信息</p>
@@ -2112,7 +2112,7 @@ public class light extends HttpServlet {
 </ol>
 <p>这样子的规则，我们称它为“RESTful”标准。</p>
 <p>下图是RESTful的状态码返回</p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/restful_res.jpg" alt="restful_res"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/restful_res.jpg" alt="restful_res"></p>
 <h1 id="5-接口测试"><a href="#5-接口测试" class="headerlink" title="5. 接口测试"></a>5. 接口测试</h1><p>前面的搞清楚了，接口测试就简单了，其实就是几个步骤。</p>
 <ol>
 <li><p>拿到接口的url地址</p>
@@ -2185,7 +2185,7 @@ print(d[&#39;liju_result&#39;][&#39;tag&#39;])
 <li>输入下图红框参数</li>
 <li>点击”send”，查看返回结果</li>
 </ol>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/postman_py.png" alt="postman_py"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/postman_py.png" alt="postman_py"></p>
 <p>接口测试就是这么简单</p>
 <h2 id="接口测试用例"><a href="#接口测试用例" class="headerlink" title="接口测试用例"></a>接口测试用例</h2><p>接口测试用例的设计就没什么好讲的了，与功能测试一样设计就好了。我是用Excel来编写的，主要是为了方便管理，只要写的干净，让人看的很舒服就好了。我自己设计的用例是这样的：</p>
 <ol>
@@ -2195,7 +2195,7 @@ print(d[&#39;liju_result&#39;][&#39;tag&#39;])
 <li>在开始要注明测试时需要的sql，如下图开始我会创建用户，用完了我会删除</li>
 </ol>
 <p>这样的用例比较好管理，如图：</p>
-<p><img src="%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/ifs_xlsx.png" alt="ifs_xlsx"></p>
+<p><img src="/2018/08/31/Test/接口测试总结/ifs_xlsx.png" alt="ifs_xlsx"></p>
 <p>整个接口测试就这么多了。接口测试其实很简单，在功能测试眼里，接口测试那么高大上，其实不也过如此了。</p>
 
 </div>
