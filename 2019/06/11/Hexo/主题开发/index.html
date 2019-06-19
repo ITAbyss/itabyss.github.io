@@ -5,13 +5,13 @@
 	<meta charset="utf-8">
 
 	<!-- 引入配置文件 -->
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/wiki/css/main.css">
 
 	<!-- 字体图片库 -->
-	<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/wiki/lib/font-awesome/css/font-awesome.min.css">
 
 	<!-- 代码高亮库 -->
-	<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+	<link rel="stylesheet" href="/wiki/lib/highlight/styles/atom-one-dark.css">
 	
 </head>
 <body>
@@ -320,7 +320,7 @@ $ hexo s</code></pre>
 <pre><code class="bash">INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code></pre>
 <p>启动后，访问『 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 』</p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20180627190808193.png" alt="image-20180627190808193"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20180627190808193.png" alt="image-20180627190808193"></p>
 <p>当然也可以使用一些其他的命令，可以通过帮助来查看</p>
 <pre><code class="sh">hexo help
 Usage: hexo &lt;command&gt;
@@ -408,7 +408,7 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></pre>
 <p>访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
 <p>可以看到一个白色的界面</p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611175811781.png" alt="image-20190611175811781"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611175811781.png" alt="image-20190611175811781"></p>
 <h3 id="模块介绍"><a href="#模块介绍" class="headerlink" title="模块介绍"></a>模块介绍</h3><p>为了测试该界面，分别在刚刚新建的 layout.ejs、index.ejs、post.ejs 中加些文字。</p>
 <p>『layout.ejs』 这个文件是用于布局的</p>
 <pre><code class="html">这里是 layout.ejs</code></pre>
@@ -417,7 +417,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 <p>『post.ejs』 这个文件是用于文章的</p>
 <pre><code class="html">这里是 post.ejs</code></pre>
 <p>刷新 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，可以看到有中文乱码。</p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611180317902.png" alt="image-20190611180317902"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611180317902.png" alt="image-20190611180317902"></p>
 <p>在 『layout.ejs』加上 html 代码，加上 utf-8 编码显示。</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -433,7 +433,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 &lt;/html&gt;</code></pre>
 <p>重启 hexo 服务 【注意: 这次要重启，还是乱码的请重启】</p>
 <p>重启好了再刷新 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611180729426.png" alt="image-20190611180729426"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611180729426.png" alt="image-20190611180729426"></p>
 <p>可以发现 layout.ejs 给默认展示出来了，但是 index.ejs 和 post.ejs 呢？</p>
 <p>可以用 ejs 引入代码，将这两个模板给引入</p>
 <pre><code class="ejs">&lt;!DOCTYPE html&gt;
@@ -452,7 +452,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611181023821.png" alt="image-20190611181023821"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611181023821.png" alt="image-20190611181023821"></p>
 <h3 id="EJS-标签"><a href="#EJS-标签" class="headerlink" title="EJS 标签"></a>EJS 标签</h3><p>这里简单介绍一下 ejs 语法，介绍几个用的到的标签也是就好了。详细资料可以查阅 <a href="https://ejs.bootcss.com/" target="_blank" rel="noopener">EJS文档</a>。</p>
 <table>
 <thead>
@@ -531,7 +531,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611210222968.png" alt="image-20190611210222968"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611210222968.png" alt="image-20190611210222968"></p>
 <h3 id="Hexo-变量"><a href="#Hexo-变量" class="headerlink" title="Hexo 变量"></a>Hexo 变量</h3><p>再一个就是要介绍一下，<a href="https://hexo.io/zh-cn/docs/variables" target="_blank" rel="noopener">Hexo Api</a> 我们会根据它提供的变量 api 来获取页面信息，进行 Blog 开发。同样稍微介绍一下常用的。</p>
 <table>
 <thead>
@@ -654,13 +654,13 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611212914872.png" alt="image-20190611212914872"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611212914872.png" alt="image-20190611212914872"></p>
 <p>可以看到，点击了这个 Hello World 的超链接，跳转过去，并没有看到任何信息，是因为在 post.ejs 中没有引入文章，所以没有信息，这个时候在 post.ejs 中引入文章</p>
 <p>『post.ejs』</p>
 <pre><code class="ejs">这里是 post.ejs
 
 &lt;%- page.content %&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611213529727.png" alt="image-20190611213529727"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611213529727.png" alt="image-20190611213529727"></p>
 <p>这个时候访问主页的 Hello World 之后，就会访问文章的 url 了，此时也有文章出现了。</p>
 <p>如果想要看变量里面都是什么东西，可以使用 js 的 console.log() 来查看，在控制台中查看</p>
 <p>『layout.ejs』</p>
@@ -676,9 +676,9 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611214947308.png" alt="image-20190611214947308"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611214947308.png" alt="image-20190611214947308"></p>
 <h2 id="主题制作"><a href="#主题制作" class="headerlink" title="主题制作"></a>主题制作</h2><h3 id="主题布局"><a href="#主题布局" class="headerlink" title="主题布局"></a>主题布局</h3><p>说道这里，万事俱备，就可以正儿八经的开始做事了。我想要一个这样布局的 wiki</p>
-<p><img src="/2019/06/11/Hexo/主题开发/%E5%B8%83%E5%B1%80.png" alt="布局"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/%E5%B8%83%E5%B1%80.png" alt="布局"></p>
 <h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><p>新建静态资源文件，并且放一下测试的 md 文件进 _posts 中，整个 wiki 的目录如下。主要添加了 theme.wiki.source 中的静态资源和已经布局用的 ejs</p>
 <pre><code class="sh">wiki ➔  tree -N
 .
@@ -822,7 +822,7 @@ nav {
 }
 /* #################### 全局 #################### */
 </code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190611230618990.png" alt="image-20190611230618990"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190611230618990.png" alt="image-20190611230618990"></p>
 <h3 id="添加导航栏"><a href="#添加导航栏" class="headerlink" title="添加导航栏"></a>添加导航栏</h3><p>将刚刚配置文件里面加的导航给列出来</p>
 <p>『nav.ejs』</p>
 <pre><code class="ejs">&lt;ul id=&quot;menu&quot;&gt;
@@ -862,7 +862,7 @@ nav ul li a:hover {
     border-bottom: 1px solid;
 }
 /* #################### 导航 #################### */</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190612162825376.png" alt="image-20190612162825376"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190612162825376.png" alt="image-20190612162825376"></p>
 <h3 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h3><p>想要一个有树状结构的侧边栏，然后给目录、文件、以及搜索框增加图标，需要外部的图片库 。</p>
 <p>我的用的图片库是『<a href="http://fontawesome.dashgame.com" target="_blank" rel="noopener">Font Awesome</a>』。下载好了，放到 source/lib 中。</p>
 <pre><code class="sh">themes/wiki/
@@ -1019,7 +1019,7 @@ nav ul li a:hover {
         showTree(pathToTree(site.posts))
     %&gt;
 &lt;/div&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190612173930007.png" alt="image-20190612173930007"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190612173930007.png" alt="image-20190612173930007"></p>
 <p>在 main.css 文件中，增加侧边栏美化</p>
 <p>『main.css』</p>
 <pre><code class="css">/* #################### 侧边栏 #################### */
@@ -1093,7 +1093,7 @@ aside #tree i.fa {
 }
 
 /* #################### 侧边栏 #################### */</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190612173955929.png" alt="image-20190612173955929"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190612173955929.png" alt="image-20190612173955929"></p>
 <h3 id="添加文章"><a href="#添加文章" class="headerlink" title="添加文章"></a>添加文章</h3><p>侧边栏还有搜索功能，和目录折叠功能没实现，这个后面再实现，先把链接里面的内容给搞定，这个时候需要编辑 post.ejs了</p>
 <p>『post.ejs』</p>
 <pre><code class="ejs">&lt;div&gt;
@@ -1104,11 +1104,11 @@ aside #tree i.fa {
 &lt;div id=&quot;article&quot;&gt;
     &lt;%- page.content %&gt;
 &lt;/div&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613000159693.png" alt="image-20190613000159693"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613000159693.png" alt="image-20190613000159693"></p>
 <h4 id="图片插件"><a href="#图片插件" class="headerlink" title="图片插件"></a>图片插件</h4><p>可以看到，大致雏形出来了，但是图片都是 404 找不到。</p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613000328131.png" alt="image-20190613000328131"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613000328131.png" alt="image-20190613000328131"></p>
 <p>查看后，发现图片的路径不对。因为我用 『Typora』进行 md 的编写。里面有个设置就是将图片保存在当前文件名命名的同级目录下。</p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613000513361.png" alt="image-20190613000513361"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613000513361.png" alt="image-20190613000513361"></p>
 <p>因此为了保证 Hexo 的图片与我设置的一致，需要安装一个 NodeJs 插件 『hexo-asset-image』获取文件相对路径下同名文件夹的图片。</p>
 <p>返回到 hexo init 的 wiki 目录下进行安装 【<strong>注意: 不是主题的wiki</strong>】</p>
 <pre><code class="sh">npm install https://github.com/CodeFalling/hexo-asset-image --save</code></pre>
@@ -1144,7 +1144,7 @@ update link as:--&gt;/2018/01/17/Docker/镜像部署/CentOS/success.png
 update link as:--&gt;/2018/01/17/Docker/镜像部署/CentOS/success.png
 INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></pre>
 <p>看日志，发现他已经在更新我的图片了，看一眼 Blog 图片就已经出来了，不再是 404 了。</p>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613001844206.png" alt="image-20190613001844206"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613001844206.png" alt="image-20190613001844206"></p>
 <p>仔细看文件路径，在我 『主题开发.md』文件的同级，有个名字叫『主题开发』的文件夹，里面存着我引用的图片资源，这样的路径，才能被这个插件给加载出来。</p>
 <pre><code class="sh">├── Hexo
 │       │   ├── 安装
@@ -1220,7 +1220,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613004923042.png" alt="image-20190613004923042"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613004923042.png" alt="image-20190613004923042"></p>
 <p>发现代码并没有高亮，找了下原因，原来是默认主题已经是 『highlight』代码高亮了，但是它的这些并不够炫酷，还是选择坚持用我自己下载的，所以我必须得去总配置文件 _config.yml 里面，把它给关闭，大概在 42 行的位置，将这 3 个选项关闭。</p>
 <p>『_config.yml』</p>
 <pre><code class="yml">highlight:
@@ -1231,7 +1231,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
 <p>修改配置文件以后，得重启 hexo 在重启前，先 hexo clean 以免还有缓存在。</p>
 <pre><code class="sh">hexo clean
 hexo s</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613005313120.png" alt="image-20190613005313120"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613005313120.png" alt="image-20190613005313120"></p>
 <p>代码出现高亮了，现在美化文章，增加 css</p>
 <p>『main.css』</p>
 <pre><code class="css">/* #################### 文章 #################### */
@@ -1376,7 +1376,7 @@ hexo s</code></pre>
 }
 
 /* #################### 文章 #################### */</code></pre>
-<p><img src="/2019/06/11/Hexo/主题开发/image-20190613014116367.png" alt="image-20190613014116367"></p>
+<p><img src="%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/image-20190613014116367.png" alt="image-20190613014116367"></p>
 <p>树状 js 动画</p>
 <p>搜索</p>
 <p>导航</p>
@@ -1392,16 +1392,16 @@ hexo s</code></pre>
 	</div>
 
 	<!-- 引入代码高亮的 js -->
-	<script src="/lib/highlight/highlight.pack.js"></script>
+	<script src="/wiki/lib/highlight/highlight.pack.js"></script>
 
 	<!-- 引入 jquery -->
-	<script src="/lib/jquery-3.4.1.min.js"></script>
+	<script src="/wiki/lib/jquery-3.4.1.min.js"></script>
 
 	<!-- 引入 pjax -->
-	<script src="/lib/jquery.pjax.js"></script>
+	<script src="/wiki/lib/jquery.pjax.js"></script>
 	
 	<!-- 引入 js 文件 -->
-	<script src="/js/main.js"></script>
+	<script src="/wiki/js/main.js"></script>
 
 </body>
 </html>
