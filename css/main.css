@@ -391,4 +391,9 @@ aside #toc a:hover{
 
 /* #################### 主页 #################### */
 
+canvas#live2dcanvas {
+    border: 0 !important;
+    left: 0;
+}
+
 
