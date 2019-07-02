@@ -414,6 +414,23 @@ canvas#live2dcanvas {
 	}
 }
 
+@media all and (orientation : portrait) {
+
+/*竖屏*/
+	aside {
+		display: none;
+	}
+
+	#content {
+		padding-left: 0;
+	}
+
+	canvas#live2dcanvas {
+		display: none;
+	}
+
+}
+
 /* #################### 自适应 #################### */
 
 
