@@ -414,9 +414,9 @@ canvas#live2dcanvas {
 	}
 }
 
+/*竖屏*/
 @media all and (orientation : portrait) {
 
-/*竖屏*/
 	aside {
 		display: none;
 	}
@@ -429,6 +429,22 @@ canvas#live2dcanvas {
 		display: none;
 	}
 
+}
+
+/*横屏*/
+@media all and (orientation : landscape) {
+
+	aside {
+		display: none;
+	}
+
+	#content {
+		padding-left: 0;
+	}
+
+	canvas#live2dcanvas {
+		display: none;
+	}
 }
 
 /* #################### 自适应 #################### */
